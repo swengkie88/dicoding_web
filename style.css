@@ -156,8 +156,8 @@ nav ul li a:hover {
     position: relative;
     flex: 1;
     padding: 0 80px;
+    text-align: center;
     z-index: 2;
-    text-shadow: 0px 3px 20px #FFEB3B;
 }
 
 .banner h1 {
@@ -167,6 +167,60 @@ nav ul li a:hover {
 
 .banner em {
     font-size: 1.25em;
+}
+
+
+/* Scroll down animation */
+
+.scroll-down2 {
+    width: 25px;
+    height: 45px;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    margin: 15px auto;
+}
+
+.scroll-down2:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    transform: translateX(-50%);
+    background: #fff;
+    animation: scrollDown2 1.5s ease infinite;
+}
+
+.scroll-down2:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 5px;
+    width: 4px;
+    height: 12px;
+    border-radius: 3px;
+    transform: translateX(-50%);
+    background: #fff;
+}
+
+@keyframes scrollDown2 {
+    0% {
+        transform: translate(-50%, 0px);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(-50%, 8px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, 16px);
+        opacity: 0;
+    }
 }
 
 @media (max-width: 768px) {
@@ -230,6 +284,11 @@ article.card {
 .card-img-wrapper img {
     height: auto;
     width: 100%;
+    transition: 0.3s all;
+}
+
+article.card:hover .card-img-wrapper img {
+    transform: scale(1.5);
 }
 
 .card {
