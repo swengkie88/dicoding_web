@@ -435,8 +435,29 @@ footer form button {
     margin: 5px;
 }
 
+footer #menu-socmed {
+    margin: 10px 0px;
+}
+
+footer #menu-socmed li {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+footer #menu-socmed li a i {
+    font-size: 1.75em!important;
+}
+
+#copy {
+    margin: 10px 0px;
+    padding: 0 70px;
+    color: #fff;
+    font-size: 10pt;
+}
+
 @media(max-width: 768px) {
-    .block-footer {
+    .block-footer,
+    #copy {
         padding: 0px;
     }
 }
