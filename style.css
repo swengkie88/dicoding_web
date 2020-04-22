@@ -184,7 +184,6 @@ main {
 
 #content {
     flex-basis: 70%;
-    padding: 10px;
 }
 
 article.card {
@@ -375,4 +374,10 @@ footer form button {
     color: #fff;
     padding: 10px;
     margin: 5px;
+}
+
+@media(max-width: 768px) {
+    .block-footer {
+        padding: 0px;
+    }
 }
