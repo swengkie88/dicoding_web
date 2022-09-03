@@ -1,4 +1,3 @@
-# dicoding_web
 # Submission Belajar Dasar Pemrograman Web Dicoding
 
 Ini merupakan projek yang saya buat dalam tujuan memenuhi 
