@@ -125,7 +125,7 @@ header {
 .wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 header a {
@@ -339,6 +339,7 @@ main {
 
 #content {
     flex-basis: 70%;
+    margin: 0px 10px;
 }
 
 article.card {
@@ -352,6 +353,7 @@ article.card {
 
 @media(max-width: 768px) {
     #content {
+        margin: 0px;
         flex-basis: 100%;
     }
     article.card {
@@ -630,10 +632,40 @@ aside .date {
     display: block;
     margin: 0px;
     font-size: 10pt;
-}
+} 
 
 aside .card {
     padding: 20px 10px;
+    margin-bottom: 20px;
+}
+
+.card-profile{
+    padding: 0px!important;
+    text-align: center;
+    overflow: hidden;
+}
+
+.card-profile .profile-cover{
+    height: 150px;
+}
+
+.card-profile .avatar{
+    height: 100px;
+    width: 100px;
+}
+
+.card-profile .avatar img {
+    margin-top: -20px;
+    height: 140px;
+}
+
+.card-profile h2 a{
+    color: var(--lightColor);
+    text-decoration: none;
+}
+
+.card-profile h2:hover a{
+    text-decoration: underline;
 }
 
 @media(max-width: 768px) {
@@ -779,6 +811,10 @@ footer #menu-socmed li a:hover i {
     padding: 0 10px;
 }
 
+#big-cover .card{
+    overflow: hidden;
+}
+
 .profile-cover {
     background: url('../img/news_1.jpg') no-repeat;
     background-size: cover;
@@ -801,12 +837,16 @@ footer #menu-socmed li a:hover i {
     margin: auto;
     z-index: 2;
     flex: 1;
-}
-
-.avatar img {
     border: 4px solid #E91E63;
     border-radius: 50%;
     height: 150px;
+    width: 150px;
+    overflow: hidden;
+}
+
+.avatar img {
+    margin-top: -30px;
+    height: 200px;
 }
 
 aside.some-info {
