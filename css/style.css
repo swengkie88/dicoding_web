@@ -21,14 +21,14 @@ h1 {
 
 html {
     background: var(--lightBg);
-    --lightBtn: #FE016C;
+    --lightBtn: #ffc107;
     --lightBg: #fff;
     --lightColor: #232323;
 }
 
 html[data-theme='dark'] {
     background: var(--lightBg);
-    --lightBtn: #FFBD07;
+    --lightBtn: #e91e63;
     --lightBg: #232323;
     --lightColor: #fff;
 }
@@ -43,7 +43,6 @@ html[data-theme='dark'] {
 .dark-mode-switcher span {
     text-shadow: 0 0 10px #fff;
     margin: -10px 0px;
-    display: block;
     font-size: 11pt;
     color: var(--lightColor);
 }
@@ -58,43 +57,32 @@ html[data-theme='dark'] {
     cursor: pointer;
     text-indent: -9999px;
     width: 55px;
-    height: 30px;
+    height: 55px;
     background: var(--lightBtn);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
     border-radius: 100px;
     position: relative;
 }
 
 .dark-mode-switcher label:after {
     content: '';
-    background: #fff;
-    width: 20px;
-    height: 20px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    position: absolute;
-    top: 5px;
-    left: 4px;
+    background: url('../img/moon-solid.svg') no-repeat;
+    background-size: 60%;
+    background-position: center;
+    width: 48px;
+    height: 48px;
     transition: cubic-bezier(0.68, -0.55, 0.27, 1.55) 320ms;
 }
 
-.dark-mode-switcher input:checked+label {
-    background: #FFBD07;
-}
-
 .dark-mode-switcher input:checked+label:after {
-    left: calc(100% - 5px);
-    -webkit-transform: translateX(-100%);
-    -moz-transform: translateX(-100%);
-    -ms-transform: translateX(-100%);
-    -o-transform: translateX(-100%);
-    transform: translateX(-100%);
+    content: '';
+    background: url('../img/lightbulb.svg') no-repeat;
+    background-size: 60%;
+    background-position: center;
 }
 
 html.transition,
@@ -853,6 +841,7 @@ aside.some-info ul li {
 
 .block-skill {
     flex-basis: 15%;
+    text-align: center;
 }
 
 .block-skill img {
@@ -875,12 +864,12 @@ aside.some-info ul li {
 
 .card-portfolio {
     height: 100px;
-    width: 200px;
 }
 
 .card-portfolio img {
     height: 100%;
     width: auto;
+    margin: 0 auto;
 }
 
 #pencapaian ul li,
